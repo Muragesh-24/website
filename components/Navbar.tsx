@@ -4,7 +4,6 @@ import { useRouter } from "next/router"
 import React, { useRef, useState } from "react"
 import styled from "styled-components"
 
-// Assuming these are placeholder paths for your actual project structure
 import { useNewsletterModalContext } from "contexts/newsletter-modal.context"
 import { ScrollPositionEffectProps, useScrollPosition } from "hooks/useScrollPosition"
 import { media } from "utils/media"
@@ -175,11 +174,6 @@ const LogoWrapper = styled.a`
   text-decoration: none;
   color: rgb(var(--logoColor));
 `
-
-// --- MODIFIED STYLED COMPONENT ---
-// The key is the transition property.
-// When hiding: visibility is delayed by 0.15s, giving the user time to move the cursor.
-// When showing (in NavItemWrapper:hover): the delay is set to 0s for an instant appearance.
 const DropdownMenu = styled.ul`
   display: block; /* Changed from none to allow transitions to work */
   position: absolute;
@@ -223,8 +217,6 @@ const DropdownMenuItem = styled.li`
   }
 `
 
-// --- MODIFIED STYLED COMPONENT ---
-// Increased the padding "bridge" slightly for good measure.
 const NavItemWrapper = styled.li<{ outlined?: boolean }>`
   position: relative;
   background-color: ${(p) => (p.outlined ? "rgb(var(--primary))" : "transparent")};
