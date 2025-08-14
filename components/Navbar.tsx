@@ -146,13 +146,7 @@ function NavItem({ href, title, outlined, children }: SingleNavItem) {
 		)
 	}
 
-	return (
-		<NavItemWrapper>
-			<NextLink href={href} passHref>
-				<a>{title}</a>
-			</NextLink>
-		</NavItemWrapper>
-	)
+	return null
 }
 
 const CustomButton = styled(Button)`
@@ -231,7 +225,7 @@ const DropdownMenuItem = styled.li`
 
 // --- MODIFIED STYLED COMPONENT ---
 // Increased the padding "bridge" slightly for good measure.
-const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
+const NavItemWrapper = styled.li<{ outlined?: boolean }>`
   position: relative;
   background-color: ${(p) => (p.outlined ? "rgb(var(--primary))" : "transparent")};
   border-radius: 0.5rem;
